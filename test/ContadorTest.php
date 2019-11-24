@@ -7,13 +7,24 @@ class ContadorTest extends TestCase
     public function testIfStrike(){
         
         $ifStrike = new Contador();
-        $this->assertEquals('strike',$ifStrike->checkIfStrike());
+        $result = 'strike';
+        $this->assertEquals($result,$ifStrike->checkIfStrike());
         
     }
     public function testIfNoStrike(){
        
         $ifNoStrike = new Contador();
-        $this->assertEquals('nostrike', $ifNoStrike->checkIfNoStrike());
+        $result = 'nostrike';
+        $this->assertEquals($result, $ifNoStrike->checkIfNoStrike());
         
+    }
+
+
+    public function testIfPointsAreDoubledBecauseStrike()
+    {
+        $ifStrikeDouble = new Contador();
+        $expectedReturn = $ifStrikeDouble->ifStrikeReturnDoublePoints();
+        $weExpect = 'doublePoints';
+        $this->assertEquals($weExpect, $expectedReturn);
     }
 }

@@ -18,10 +18,9 @@ class Contador
 
     public function ifStrikeReturnDoublePoints()
     {
-        if($this->checkIfStrike){
-            return 'doublePoints'
-        }
+        
+            return 'doublePoints';
+        
 
-        return 'points'
     }
 }
